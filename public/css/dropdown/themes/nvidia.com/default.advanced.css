@@ -1,0 +1,88 @@
+/** 
+ * NVIDIA Advanced CSS Drop-Down Menu Theme
+ *
+ * @file		default.advanced.css
+ * @name		NVIDIA
+ * @version		0.1
+ * @type		transitional
+ * @browsers	Windows: IE5+, Opera7+, Firefox1+
+ *				Mac OS: Safari2+, Firefox2+
+ *
+ * @link		http://www.lwis.net/
+ * @copyright	2008 Live Web Institute. All Rights Reserved.
+ *
+ */
+@import "default.css";
+ul.dropdown li a 
+{
+ display: block;
+ padding-top: 7px;
+ padding-right: 14px;
+ padding-bottom: 7px;
+ padding-left: 14px;
+}
+
+/* ------------- Override default */
+ul.dropdown li 
+{
+ padding: 0;
+}
+
+/* ------------- Reinitiate default: post-override activities  */
+ul.dropdown li.dir 
+{
+ padding-top: 7px;
+ padding-right: 20px;
+ padding-bottom: 7px;
+ padding-left: 14px;
+}
+
+ul.dropdown ul li.dir 
+{
+ padding-right: 15px;
+}
+
+/* ------------- Custom */
+ul.dropdown li 
+{
+ 
+}
+
+ul.dropdown ul a 
+{
+ padding-top: 4px;
+ padding-right: 5px;
+ padding-bottom: 4px;
+ padding-left: 14px;
+ width: 151px;/* Especially for IE */
+}
+
+ul.dropdown ul a:hover 
+{
+ background-color: #000033;
+}
+
+ul.dropdown a.open 
+{
+ background-color: #99CCFF;
+ color: #000033;
+}
+
+ul.dropdown ul a.open 
+{
+ background-color: #000033;
+ color: #ffffff;
+}
+
+/* CSS 2.1 */
+ul.dropdown li:hover > a.dir 
+{
+ background-color: #99CCFF;
+ color: #000033;
+}
+
+ul.dropdown ul li:hover > a.dir 
+{
+ background-color: #000033;
+ color: #ffffff;
+}

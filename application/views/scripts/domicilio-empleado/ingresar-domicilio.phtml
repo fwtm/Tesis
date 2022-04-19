@@ -1,0 +1,69 @@
+<script type="text/javascript">
+            jQuery(document).ready( function() {
+                // binds form submission and fields to the validation engine
+                jQuery("#direccionempleado").validationEngine();
+            });
+</script>
+
+<div align="center">
+<form id="direccionempleado" action="" method="post">
+<fieldset><legend>DIRECCION DOMICILIARIA</legend>
+<input name="id_domicilio" readonly="readonly" id="id_domicilio" value="<?php echo $this->escape($this->id_domicilio); ?>" size="10" type="text"/>
+<table width="80%" border="0">
+  <tr>
+    <td><label>Cedula Identidad</label></td>
+    <td>&nbsp;</td>
+    <td><label>Nombres y Apellidos</label></td>
+  </tr>
+  <tr>
+    <td><label id="cedula_identidad"><?php echo $this->cedula;?></label></td>
+    <td>&nbsp;</td>
+    <td><label id="nombres_empleado"><?php echo $this->nombre; ?></label></td>
+  </tr>
+  <tr>
+    <td><label>Avenida Principal</label></td>
+    <td>&nbsp;</td>
+    <td><label>Calle</label></td>
+  </tr>
+  <tr>
+    <td><input id="avenida_direccion" name="avenida_direccion" class="validate[required]" type="text" size="35" onkeyup="this.value=this.value.toUpperCase()"/></td>
+    <td>&nbsp;</td>
+    <td><input id="calle_direccion" name="calle_direccion" class="validate[required]" type="text" size="35" onkeyup="this.value=this.value.toUpperCase()"/></td>
+  </tr>
+  <tr>
+    <td><label>Manzana</label></td>
+    <td>&nbsp;</td>
+    <td><label>Lugar de Referencia</label></td>
+  </tr>
+  <tr>
+    <td><input id="manzana_domicilio" name="manzana_domicilio" type="text" size="35" onkeyup="this.value=this.value.toUpperCase()"/></td>
+    <td>&nbsp;</td>
+    <td><input id="lugar_referencia" name="lugar_referencia" class="validate[required]" type="text" size="35" onkeyup="this.value=this.value.toUpperCase()"/></td>
+  </tr>
+  <tr>
+    <td><label>Persona de Referencia</label></td>
+    <td>&nbsp;</td>
+    <td><label>Telefono</label></td>
+  </tr>
+  <tr>
+    <td><input id="contacto_referencia" name="contacto_referencia" class="validate[required]" type="text" size="35" onkeyup="this.value=this.value.toUpperCase()"/></td>
+    <td>&nbsp;</td>
+    <td><input id="telefono_contacto" name="telefono_contacto" type="text" size="20"/></td>
+  </tr>
+</table>
+    <br>
+</fieldset>
+
+<br>
+<table width="80%" border="0">
+  <tr>
+    <td width="33%">&nbsp;</td>
+
+    <td width="7%"><input class="button small blue" name="" type="submit" value="Ingresar"/></td>
+    <td width="16%">&nbsp;</td>
+    <td width="6%"><input class="button small blue" name="" type="button" onClick="document.location = '<?php echo $this->url(array('controller' => 'index' ,'action' => 'index'));?>'" value="Cancelar"/></td>
+    <td width="38%">&nbsp;</td>
+  </tr>
+</table>
+</form>
+</div>

@@ -1,0 +1,180 @@
+-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>GESTION DE TALENTO HUMANO</title>
+
+<!--evitar el uso del boton retroceso-->
+<script type="text/javascript">
+if(history.forward(1)){
+history.replace(history.forward(1));
+}
+</script>
+<!-- Menu plantilla-->
+<link href="<?php echo $this->baseUrl; ?>/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="<?php echo $this->baseUrl; ?>/css/dropdown/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="<?php echo $this->baseUrl; ?>/css/dropdown/themes/nvidia.com/default.advanced.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<?php echo $this->baseUrl; ?>/js/jquery/jquery-1.5.1.js"></script>
+
+<!-- Validaciones-->
+<?php echo $this->headLink(); ?>
+<?php echo $this->headScript(); ?> <br/>
+
+</head>
+
+<body>
+<div id="wrap">
+   <div id="cabecera"> </div>
+    <div id="header">
+	<table id ="blanco">
+	  <tr>
+             <td><div id="logo"> </div></td>
+             <td align = "right" ><h1>Area de Salud Nro. 3</h1> <h2>La Tola - Vicentina</h2> </td>
+	  </tr>
+	</table>
+</div>
+
+<div id="menu">
+<ul class="dropdown dropdown-horizontal" >
+	<li><a href="<?php echo $this->url(array('controller' => 'index',
+                        'action' => 'index')); ?>" class="dir">&nbsp;INICIO&nbsp;</a>
+	</li>
+        <li><a class="dir">REGISTROS DE ASISTENCIA</a>
+		<ul>
+                        <li><a href="<?php echo $this->url(array('controller' => 'registroIngreso',
+                        'action' => 'index')); ?>">Ingreso de Registros</a>
+                        </li>
+		</ul>
+	</li>
+	 <li><a class="dir">DATOS DEL PERSONAL</a>
+		<ul>
+                        <li><a href="<?php echo $this->url(array('controller' => 'DatosPersonales',
+                        'action' => 'ingreso-datos')); ?>">Ingresar Datos Personales</a>
+                        </li>
+		</ul>
+	</li>
+    <li><a class="dir">&nbsp;SOLICITUDES PERSONAL&nbsp;</a>
+		<ul>
+			<li><a href="./">Solicitud de Vacaciones, Permisos y Licencias</a>
+                        </li>
+			<li><a href="./">Justificación de Ausencia Temporal</a>
+                        </li>
+			<li><a href="./">Acción de Personal</a>
+                        </li>
+		</ul>
+	</li>
+	<li><a class="dir">&nbsp;&nbsp;&nbsp;MANTENIMIENTO</a>
+           <ul>
+               <li><a href="<?php echo $this->url(array('controller' => 'Especialidad',
+                'action' => 'agregar')); ?>">Especialidad</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'Discapacidad',
+                        'action' => 'ingresar-discapacidad')); ?>">Discapacidad</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'Nominal',
+                        'action' => 'ingresar-nominal')); ?>">Nominal</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'Funcion',
+                        'action' => 'ingresar-funcion')); ?>">Estudios Actuales</a></li>               
+
+               <li><a href="<?php echo $this->url(array('controller' => 'TituloPostgrado',
+                        'action' => 'ingresar-postgrado')); ?>">Títulos Postgrado</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'DocenciaUniversitaria',
+                        'action' => 'ingresar-docencia')); ?>">Docencia Universitaria</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'EstudiosActuales',
+                        'action' => 'ingresar-estudios')); ?>">Estudios Universitarios Actuales</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'Capacitacion',
+                        'action' => 'ingresar-capacitacion')); ?>">Capacitación</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'Canton',
+                        'action' => 'ingresar-canton')); ?>">Agregar Canton</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'Provincia',
+                        'action' => 'ingresar-provincia')); ?>">Agregar Provincia</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'MotivosAccion',
+                        'action' => 'agregar')); ?>">Agregar Motivos Accion Personal</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'MotivosVacaciones',
+                        'action' => 'agregar')); ?>">Agregar Vacaciones Personal</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'DireccionPersonal',
+                        'action' => 'agregar')); ?>">Agregar Direccion Personal</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'ProgramaFinanciamiento',
+                        'action' => 'agregar')); ?>">Agregar Programa Financiamiento</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'Parroquia',
+                        'action' => 'ingresar-parroquia')); ?>">Parroquia</a></li>
+
+               <li><a href="<?php echo $this->url(array('controller' => 'UnidadOperativa',
+                        'action' => 'agregar')); ?>">Unidad Operativa</a></li>
+
+                <li><a href="<?php echo $this->url(array('controller' => 'ExperienciaLaboral',
+                        'action' => 'ingresar-experiencia')); ?>">Experiencia Laboral</a></li>
+
+           </ul>
+	</li>
+	<li><a class="dir">OTROS</a>
+            <ul>
+                <li><a href="<?php echo $this->url(array('controller' => 'Usuarios',
+                        'action' => 'login')); ?>">Login</a></li>
+
+                <li><a href="<?php echo $this->url(array('controller' => 'Usuarios',
+                        'action' => 'home')); ?>">Home</a></li>
+
+                <li><a href="<?php echo $this->url(array('controller' => 'Usuarios',
+                        'action' => 'signup')); ?>">Signup</a></li>
+            </ul>
+	</li>
+	<li><a class="dir">Reportes</a>
+		<ul>
+			<li><a href="<?php echo $this->url(array('controller' => 'Reportes',
+                        'action' => 'buscar-persona')); ?>">Reportes Registro Ingreso</a></li>
+			<li><a href="./">Opcion 6B</a></li>
+			<li><a href="./">Opcion 6C</a></li>
+			<li><a href="./">Opcion 6D</a></li>
+
+		</ul>
+	</li>
+<!--	<li><a href="./" class="dir">Opcion 7</a>
+		<ul>
+			<li><a href="./">Opcion 7A</a></li>
+			<li><a href="./">Opcion 7B</a></li>
+			<li><a href="./">Opcion 7C</a></li>
+			<li><a href="./">Opcion 7D</a></li>
+
+		</ul>
+	</li>
+	<li><a href="./">Opcion 8</a></li>-->
+</ul>
+
+</div>
+
+<div id="content">
+
+   <!-- Muestra mensajes de error si existen -->
+
+   <?php  if(!is_null($this->mensajeError)): ?>
+   <?php  echo '<div class="error">'. $this->mensajeError.'</div>' ?>
+   <?php endif ?>
+   <!--Aqui se muestra el contenido segun la vista-->
+   <?php echo $this->layout()->content; ?>
+
+   <br></br>
+<div style="clear:both;">
+
+</div>
+</div>
+	<div id="footer">
+            Sistema de Gestión Médico para Áreas de Salud - SGMAS  -   Sitio Desarrollado en Software Libre<br>
+            Universidad Politécnica Salesiana</br>
+        </div>
+</div>
+
+</body>
+</html>

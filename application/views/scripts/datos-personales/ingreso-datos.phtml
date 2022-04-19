@@ -1,0 +1,315 @@
+<script type="text/javascript">
+            function check()
+            {
+            var is_checked = document.getElementById('provisional').checked;
+                if (is_checked == true)
+                {
+                    //alert("Si está tildado!");
+                     document.datospersonales.nombramiento_provisional.value = true;
+                } else {
+                    //alert("No está tildado.");
+                     document.datospersonales.nombramiento_provisional.value = false;
+                    }
+            };
+
+            function check1()
+            {
+            var is_checked1 = document.getElementById('definitivo').checked;
+
+                if (is_checked1 == true)
+                {
+                    //alert("Si está tildado!");
+                    document.datospersonales.nombramiento_definitivo.value = true;
+                } else {
+                    //alert("No está tildado.");
+                    document.datospersonales.nombramiento_definitivo.value = false;
+                    }
+            };
+
+             function contra()
+            {
+            var is_checked1 = document.getElementById('contratado').checked;
+
+                if (is_checked1 == true)
+                {
+                    //alert("Si está tildado!");
+                    document.datospersonales.contrato.value = true;
+                } else {
+                    //alert("No está tildado.");
+                    document.datospersonales.contrato.value = false;
+                    }
+            };
+
+           $(document).ready(function(){
+   $("#fecha_nacimiento").datepicker({
+      yearRange: '1930:2040',
+      showOn: 'both',
+      buttonImage: '<?php echo $this->baseUrl; ?>/js/jqueryui/css/cupertino/images/calendar.png',
+      buttonImageOnly: false,
+      dateFormat: 'yy/mm/dd',
+      changeMonth: true,
+      changeYear: true
+   });
+})
+
+$(document).ready(function(){
+   $("#ingreso_sector_publico").datepicker({
+      yearRange: '1930:2040',
+      showOn: 'both',
+      buttonImage: '<?php echo $this->baseUrl; ?>/js/jqueryui/css/cupertino/images/calendar.png',
+      buttonImageOnly: false,
+      dateFormat: 'yy/mm/dd',
+      changeMonth: true,
+      changeYear: true
+   });
+})
+
+$(document).ready(function(){
+   $("#ingreso_msp").datepicker({
+      yearRange: '1930:2040',
+      showOn: 'both',
+      buttonImage: '<?php echo $this->baseUrl; ?>/js/jqueryui/css/cupertino/images/calendar.png',
+      buttonImageOnly: false,
+      dateFormat: 'yy/mm/dd',
+      changeMonth: true,
+      changeYear: true
+   });
+})
+
+$(document).ready(function(){
+   $("#fecha_nombramiento").datepicker({
+      yearRange: '1930:2040',
+      showOn: 'both',
+      buttonImage: '<?php echo $this->baseUrl; ?>/js/jqueryui/css/cupertino/images/calendar.png',
+      buttonImageOnly: false,
+      dateFormat: 'yy/mm/dd',
+      changeMonth: true,
+      changeYear: true
+   });
+})
+
+ jQuery(document).ready( function() {
+                // binds form submission and fields to the validation engine
+                jQuery("#datospersonales").validationEngine();
+            });
+
+</script>
+
+
+<div align="center">
+<form id="datospersonales" name="datospersonales" action="" method="post">
+<fieldset><legend>DATOS PERSONALES</legend>
+<table width="80%" border="0">
+  <tr>
+    <td><label>Cedula de Identidad</label></td>
+    <td width="35">&nbsp;</td>
+    <td><label>Codigo Empleado </label></td>
+    <td width="35">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><input id="cedula_identidad" name="cedula_identidad" class="validate[required,minSize[10],maxSize[10]]" type="text" maxlength="10" /></td>
+    <td width="35">&nbsp;</td>
+    <td><input id="codigo_personal" name="codigo_personal" class="validate[required,custom[onlyLetterNumber]]" type="text" maxlength="10" onkeyup="this.value=this.value.toUpperCase()"/></td>
+    <td width="35">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><label>Nombres Empleado </label></td>
+    <td width="35">&nbsp;</td>
+    <td><label>Apellidos Empleado</label></td>
+    <td width="35">&nbsp;</td>
+    <td><label>Sexo</label></td>
+  </tr>
+  <tr>
+    <td><input id="nombre_empleado" name="nombre_empleado" class="validate[required]" type="text" size="35" maxlength="250" onkeyup="this.value=this.value.toUpperCase()"/></td>
+    <td width="35">&nbsp;</td>
+    <td><input id="apellido_empleado" name="apellido_empleado" class="validate[required]" type="text" size="35" maxlength="250" onkeyup="this.value=this.value.toUpperCase()"/></td>
+    <td width="35">&nbsp;</td>
+    <td><select id="sexo" name="sexo">
+      <option value="">[Seleccionar]</option>
+      <option value="MASCULINO">MASCULINO</option>
+      <option value="FEMENINO">FEMENINO</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td><label>No. Afiliacion IESS</label></td>
+    <td width="35">&nbsp;</td>
+    <td><label>Fecha de Nacimiento</label></td>
+    <td width="35">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><input id="afiliacion_iess" name="afiliacion_iess" type="text" /></td>
+    <td width="35">&nbsp;</td>
+    <td><input id="fecha_nacimiento" name="fecha_nacimiento" type="text" /></td>
+    <td width="35">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+    <br>
+</fieldset>
+<p>&nbsp;</p>
+<!--Datos Generales del Personal y la Unidad Operativa-->
+<fieldset>
+<legend>DATOS GENERALES Y UNIDAD OPERATIVA</legend>
+<table width="80%" border="0">
+  <tr>
+    <td><label>Grupo Sanguineo</label></td>
+    <td>&nbsp;</td>
+    <td><label>Celular</label></td>
+  </tr>
+  <tr>
+    <td><select id="grupo_sanguineo" name="grupo_sanguineo">
+      <option value="">[Seleccionar]</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+    </select></td>
+    <td>&nbsp;</td>
+    <td><input id="celular" name="celular" type="text" size="20" /></td>
+  </tr>
+  <tr>
+    <td><label>Email</label></td>
+    <td>&nbsp;</td>
+    <td><label>Foto Empleado </label></td>
+  </tr>
+  <tr>
+    <td><input id="email" name="email" type="text" size="35" /></td>
+    <td>&nbsp;</td>
+    <td><input id="foto_empleado" name="foto_empleado" type="file" /></td>
+  </tr>
+  <tr>
+    <td><label>Estado Civil</label></td>
+    <td>&nbsp;</td>
+    <td><label>Fecha Ingreso al Sector Publico</label></td>
+  </tr>
+  <tr>
+    <td><select id="estado_civil" name="estado_civil">
+      <option value="">[Seleccionar]</option>
+      <option value="CASADO">CASADO</option>
+      <option value="SOLTERO">SOLTERO</option>
+      <option value="DIVORCIADO">DIVORCIADO</option>
+      <option value="VIUDO">VIUDO</option>
+      <option value="UNION LIBRE">UNION LIBRE</option>
+    </select></td>
+    <td>&nbsp;</td>
+    <td><input id="ingreso_sector_publico" name="ingreso_sector_publico" type="text"/></td>
+  </tr>
+  <tr>
+    <td><label>Fecha Ingreso al M.S.P</label></td>
+    <td>&nbsp;</td>
+    <td><label>Nombramiento</label></td>
+  </tr>
+  <tr>
+    <td><input id="ingreso_msp" name="ingreso_msp" type="text"/></td>
+    <td>&nbsp;</td>
+    <td><table width="100%" border="0">
+  <tr>
+      <td><input id="provisional" name="nombramiento" class="validate[minCheckbox[1]]" type="checkbox" onclick="check(this.checked)" /><label>Provisional</label><input id="nombramiento_provisional" name="nombramiento_provisional" type="hidden" value="false"></td>
+      <td><input id="definitivo" name="nombramiento"  class="validate[maxCheckbox[1]]" type="checkbox" onclick="check1(this.checked)"/><label>Definitivo</label><input id="nombramiento_definitivo" type="hidden" name="nombramiento_definitivo" value="false"></td>
+  </tr>
+</table></td>
+  </tr>
+  <tr>
+    <td><label>Fecha de Nombramiento</label></td>
+    <td>&nbsp;</td>
+    <td><table width="100%" border="0">
+  <tr>
+      <td width="50%"><label>Contrato</label><input id="contrato" name="contrato" type="hidden" value="false"></td>
+    <td width="51%"><label>Programa que Financia el Contrato</label></td>
+  </tr>
+</table></td>
+  </tr>
+  <tr>
+    <td><input id="fecha_nombramiento" name="fecha_nombramiento" type="text"/></td>
+    <td>&nbsp;</td>
+    <td><table width="100%" border="0">
+  <tr>
+      <td width="50%"><input id="contratado" name="contratado" type="checkbox" onclick="contra(this.checked)"/></td>
+    <td><select id="id_programa" name="id_programa" class="validate[required] text-input">
+      <option value="">[Seleccionar]</option>
+       <?php foreach ($this->programa as $item) : ?>
+      <option value="<?php echo $this->escape($item->id_programa);?>"><?php echo $this->escape($item->programa_financiamiento);?></option>
+       <?php endforeach; ?>
+    </select></td>
+  </tr>
+</table></td>
+  </tr>
+  <tr>
+    <td><label>Nominal</label></td>
+    <td>&nbsp;</td>
+    <td><label>Remuneracion Mensual</label></td>
+  </tr>
+  <tr>
+      <td><select id="id_nominal" name="id_nominal" onchange="cargarSueldo()">
+        <option value="">[Seleccionar]</option>
+        <?php foreach ($this->nominal as $item) : ?>
+        <option value="<?php echo $this->escape($item->id_nominal);?>"><?php echo $this->escape($item->grupo_ocupacional);?></option>
+        <?php endforeach; ?>     
+      </select></td>
+    <td>&nbsp;</td>
+    <td><input id="remuneracion_mensual" name="remuneracion_mensual" class="labelrotulo" type="text" value="<?php echo $this->escape($this->remuneracion_mensual);?> "/></td>
+  </tr>
+  <tr>
+    <td><label>Provincia</label></td>
+    <td>&nbsp;</td>
+    <td><label>Canton</label></td>
+  </tr>
+  <tr>
+    <td><select id="id_provincia" name="id_provincia" class="validate[required,min[1]]" onchange="cargarCantones(this)">
+	  <option value="0">[Seleccionar]</option>
+           <?php foreach ($this->provincia as $item) : ?>
+            <option value="<?php echo $this->escape($item->id_provincia);?>"><?php echo $this->escape($item->nombre_provincia);?></option>
+           <?php endforeach; ?>
+	  </select></td>
+    <td>&nbsp;</td>
+    <td><select id="id_canton" name="id_canton" class="validate[required]" onchange="cargarParroquias(this)">
+	  <option value="0">[Seleccionar]</option>
+	  </select></td>
+  </tr>
+  <tr>
+    <td><label>Parroquia</label></td>
+    <td>&nbsp;</td>
+    <td><label>Unidad Operativa </label></td>
+  </tr>
+  <tr>
+    <td><select id="id_parroquia" name="id_parroquia" class="validate[required,min[1]]" onchange="cargarUnidades(this)">
+      <option value="0">[Seleccionar]</option>
+    </select></td>
+    <td>&nbsp;</td>
+    <td><select id="id_unidad" name="id_unidad" class="validate[required]">
+      <option value="0">[Seleccionar]</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td><label>Tiempo de Servicio (en meses) </label></td>
+    <td>&nbsp;</td>
+    <td><input id="esta_activo" name="esta_activo" type="hidden" value="TRUE"/></td>
+  </tr>
+  <tr>
+    <td><input id="tiempo_servicio" name="tiempo_servicio" type="text"/></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<br>
+</fieldset>
+<br>
+<table width="80%" border="0">
+  <tr>
+    <td width="33%">&nbsp;</td>
+
+    <td width="7%"><input class="button small blue" name="" type="submit" value="Ingresar"/></td>
+    <td width="16%">&nbsp;</td>
+    <td width="6%"><input class="button small blue" name="" type="button" onClick="document.location = '<?php echo $this->url(array('controller' => 'index' ,'action' => 'index'));?>'" value="Cancelar"/></td>
+    <td width="38%">&nbsp;</td>
+  </tr>
+</table>
+</form>
+</div>

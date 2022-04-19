@@ -1,0 +1,111 @@
+<script type="text/javascript">
+            jQuery(document).ready( function() {
+                // binds form submission and fields to the validation engine
+                jQuery("#discapacidad").validationEngine();//
+
+                });
+
+                $(document).ready(function() {
+				$('#tabla').dataTable( {
+//					"sScrollY": "80px",
+					"bPaginate": false
+				} );
+			} );   
+</script>
+
+<div align="center">
+<!--   <table width="80%" border="1">
+  <tr>
+      <td><input id="habilitar" name="habilitar" class="button small blue" type="button" value="Habilitar Formulario" onclick="habilitar_discapacidad()()"/></td>
+      <td><input id="deshabilitar" name="deshabilitar" class="button small blue" type="button" value="Dehabilitar Formulario" onclick="deshabilitar_discapacidad()()"/></td>
+      <td>&nbsp;</td>
+  </tr>
+</table>-->
+
+<form id="discapacidad" action="" method="post">
+<fieldset><legend>DISCAPACIDAD</legend>
+<table width="60%" border="0">
+  <tr>
+    <td><label>Cedula Identidad</label></td>
+    <td>&nbsp;</td>
+    <td><label>Nombres y Apellidos</label></td>
+  </tr>
+  <tr>
+    <td><label id="cedula_identidad"><?php echo $this->cedula;?></label></td>
+    <td>&nbsp;</td>
+    <td><label id="nombres_empleado"><?php echo $this->nombre; ?></label></td>
+  </tr>
+  <tr>
+    <td><label>Tipo de Discapacidad</label></td>
+    <td>&nbsp;</td>
+    <td><label>Porcentaje de Discapacidad</label></td>
+  </tr>
+  <tr>
+    <td><select id="tipo_discapacidad" name="tipo_discapacidad" class="validate[required]">
+      <option value="">[Seleccionar]</option>
+      <option value="FISICA">FISICA</option>
+      <option value="VISUAL">VISUAL</option>
+      <option value="PSICOLOGICA">PSICOLOGICA</option>
+      <option value="LENGUAJE">LENGUAJE</option>
+      <option value="AUDITIVA">AUDITIVA</option>
+    </select></td>
+    <td>&nbsp;</td>
+    <td><input id="porcentaje_discapacidad" name="porcentaje_discapacidad" type="text" class="validate[required,custom[onlyNumberSp]] text-input" size="10" /></td>
+  </tr>
+  <tr>
+    <td><label>Numero Carnet CONADIS</label></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><input id="carnet_conadis" name="carnet_conadis" type="text" class="validate[required,custom[onlyNumberSp]] text-input" size="35" /></td>
+    <td>&nbsp;</td>
+    <td><input id="verificar_discapacidad" name="verificar_discapacidad" type="hidden" value="true"/></td>
+  </tr>
+</table>
+    <br>
+</fieldset>
+
+<br>
+<table width="80%" border="0">
+  <tr>
+    <td width="33%">&nbsp;</td>
+
+    <td width="7%"><input class="button small blue" name="" type="submit" value="Ingresar"/></td>
+    <td width="16%">&nbsp;</td>
+    <td width="6%"><input class="button small blue" name="" type="button" value="Siguiente" onClick="document.location = '<?php echo $this->url(array('controller' => 'tituloUniversitario' ,'action' => 'ingresar-titulo'));?>'" value="Siguiente"/></td>
+    <td width="38%">&nbsp;</td>
+  </tr>
+</table>
+</form>
+</div>
+
+<div style="clear:both;"> </div>
+
+
+    <fieldset><legend>DISCAPACIDADES PERSONAL</legend>
+        <div align="center">
+            <table cellpadding="0" cellspacing="0" border="0" class="display" id="tabla" align="center">
+        <thead>
+		<tr>
+			<th>Id Discapacidad</th>
+                        <th>Cedula de Identidad</th>
+                        <th>Tipo de Discapacidad</th>
+			<th>Porcentaje de Discapacidad</th>
+                        <th>Carnet del CONADIS</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach ($this->datos as $value): ?>
+		<tr class="gradeA">
+			<td><?php echo $this->escape($value->id_discapacidad); ?></td>
+                        <td><?php echo $this->cedula; ?></td>
+			<td><?php echo $this->escape($value->tipo_discapacidad); ?></td>
+			<td><?php echo $this->escape($value->porcentaje_discapacidad); ?></td>
+			<td><?php echo $this->escape($value->carnet_conadis); ?></td>
+                </tr>
+        <?php endforeach; ?>
+
+                </table>
+        </div>
+                </fieldset>

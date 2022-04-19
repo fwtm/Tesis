@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<projectProfile type="default" version="1.11.4">
+  <projectDirectory>
+    <projectProfileFile filesystemName=".zfproject.xml"/>
+    <applicationDirectory classNamePrefix="Application_">
+      <apisDirectory enabled="false"/>
+      <configsDirectory>
+        <applicationConfigFile type="ini"/>
+      </configsDirectory>
+      <controllersDirectory>
+        <controllerFile controllerName="Index">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Error"/>
+        <controllerFile controllerName="DatosPersonales">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="listarCanton"/>
+          <actionMethod actionName="listarParroquia"/>
+          <actionMethod actionName="listarUnidad"/>
+          <actionMethod actionName="ingresoDatos"/>
+          <actionMethod actionName="mostrarNominal"/>
+          <actionMethod actionName="actualizarDatos"/>
+          <actionMethod actionName="visualizarDatos"/>
+        </controllerFile>
+        <controllerFile controllerName="Reportes">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="buscarPersona"/>
+          <actionMethod actionName="busquedaAjax"/>
+          <actionMethod actionName="paginadorReportes"/>
+        </controllerFile>
+        <controllerFile controllerName="RegistroIngreso">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="DomicilioEmpleado">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarDomicilio"/>
+          <actionMethod actionName="visualizarDomicilio"/>
+        </controllerFile>
+        <controllerFile controllerName="Discapacidad">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarDiscapacidad"/>
+        </controllerFile>
+        <controllerFile controllerName="TituloUniversitario">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarTitulo"/>
+        </controllerFile>
+        <controllerFile controllerName="TituloPostgrado">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarPostgrado"/>
+        </controllerFile>
+        <controllerFile controllerName="DocenciaUniversitaria">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarDocencia"/>
+        </controllerFile>
+        <controllerFile controllerName="EstudiosActuales">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarEstudios"/>
+        </controllerFile>
+        <controllerFile controllerName="ExperienciaLaboral">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarExperiencia"/>
+        </controllerFile>
+        <controllerFile controllerName="Capacitacion">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarCapacitacion"/>
+        </controllerFile>
+        <controllerFile controllerName="Nominal">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarNominal"/>
+        </controllerFile>
+        <controllerFile controllerName="Funcion">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarFuncion"/>
+        </controllerFile>
+        <controllerFile controllerName="Provincia">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarProvincia"/>
+        </controllerFile>
+        <controllerFile controllerName="Pais">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarPais"/>
+        </controllerFile>
+        <controllerFile controllerName="Canton">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarCanton"/>
+        </controllerFile>
+        <controllerFile controllerName="Parroquia">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarParroquia"/>
+        </controllerFile>
+        <controllerFile controllerName="Reportes"/>
+      </controllersDirectory>
+      <formsDirectory>
+        <formFile formName="IngresoRegistro"/>
+      </formsDirectory>
+      <layoutsDirectory enabled="false"/>
+      <modelsDirectory>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Provincia"/>
+          <dbTableFile dbTableName="Canton"/>
+          <dbTableFile dbTableName="Parroquia"/>
+          <dbTableFile dbTableName="UnidadOperativa"/>
+          <dbTableFile dbTableName="DatosPersonales"/>
+          <dbTableFile dbTableName="ProgramaFinanciamiento"/>
+          <dbTableFile dbTableName="Nominal"/>
+          <dbTableFile dbTableName="Funcion"/>
+          <dbTableFile dbTableName="RegistroIngreso"/>
+          <dbTableFile dbTableName="DireccionDomicilio"/>
+          <dbTableFile dbTableName="Discapacidad"/>
+          <dbTableFile dbTableName="TituloUniversitario"/>
+          <dbTableFile dbTableName="TituloPostgrado"/>
+          <dbTableFile dbTableName="DocenciaUniversitaria"/>
+          <dbTableFile dbTableName="EstudiosActuales"/>
+          <dbTableFile dbTableName="ExperienciaLaboral"/>
+          <dbTableFile dbTableName="Capacitacion"/>
+          <dbTableFile dbTableName="PuestoInstitucional"/>
+          <dbTableFile dbTableName="Especialidad"/>
+          <dbTableFile dbTableName="Pais"/>
+          <dbTableFile dbTableName="VisualizarReporte"/>
+        </dbTableDirectory>
+      </modelsDirectory>
+      <modulesDirectory enabled="false"/>
+      <viewsDirectory>
+        <viewScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Error">
+            <viewScriptFile forActionName="error"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DatosPersonales">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DatosPersonales">
+            <viewScriptFile forActionName="listarCanton"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DatosPersonales">
+            <viewScriptFile forActionName="listarParroquia"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DatosPersonales">
+            <viewScriptFile forActionName="listarUnidad"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Reportes">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DatosPersonales">
+            <viewScriptFile forActionName="ingresoDatos"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="RegistroIngreso">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DomicilioEmpleado">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DomicilioEmpleado">
+            <viewScriptFile forActionName="ingresarDomicilio"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Discapacidad">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Discapacidad">
+            <viewScriptFile forActionName="ingresarDiscapacidad"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="TituloUniversitario">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="TituloUniversitario">
+            <viewScriptFile forActionName="ingresarTitulo"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="TituloPostgrado">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="TituloPostgrado">
+            <viewScriptFile forActionName="ingresarPostgrado"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DocenciaUniversitaria">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DocenciaUniversitaria">
+            <viewScriptFile forActionName="ingresarDocencia"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="EstudiosActuales">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="EstudiosActuales">
+            <viewScriptFile forActionName="ingresarEstudios"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="ExperienciaLaboral">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="ExperienciaLaboral">
+            <viewScriptFile forActionName="ingresarExperiencia"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Capacitacion">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Capacitacion">
+            <viewScriptFile forActionName="ingresarCapacitacion"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Nominal">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Nominal">
+            <viewScriptFile forActionName="ingresarNominal"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DatosPersonales">
+            <viewScriptFile forActionName="mostrarNominal"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Funcion">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Funcion">
+            <viewScriptFile forActionName="ingresarFuncion"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DatosPersonales">
+            <viewScriptFile forActionName="actualizarDatos"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Provincia">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Provincia">
+            <viewScriptFile forActionName="ingresarProvincia"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Pais">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Pais">
+            <viewScriptFile forActionName="ingresarPais"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Canton">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Canton">
+            <viewScriptFile forActionName="ingresarCanton"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Parroquia">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Parroquia">
+            <viewScriptFile forActionName="ingresarParroquia"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Reportes">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DatosPersonales">
+            <viewScriptFile forActionName="visualizarDatos"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DomicilioEmpleado">
+            <viewScriptFile forActionName="visualizarDomicilio"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Reportes">
+            <viewScriptFile forActionName="buscarPersona"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Reportes">
+            <viewScriptFile forActionName="busquedaAjax"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Reportes">
+            <viewScriptFile forActionName="paginadorReportes"/>
+          </viewControllerScriptsDirectory>
+        </viewScriptsDirectory>
+        <viewHelpersDirectory/>
+        <viewFiltersDirectory enabled="false"/>
+      </viewsDirectory>
+      <bootstrapFile filesystemName="Bootstrap.php"/>
+    </applicationDirectory>
+    <dataDirectory enabled="false">
+      <cacheDirectory enabled="false"/>
+      <searchIndexesDirectory enabled="false"/>
+      <localesDirectory enabled="false"/>
+      <logsDirectory enabled="false"/>
+      <sessionsDirectory enabled="false"/>
+      <uploadsDirectory enabled="false"/>
+    </dataDirectory>
+    <docsDirectory>
+      <file filesystemName="README.txt"/>
+    </docsDirectory>
+    <libraryDirectory>
+      <zfStandardLibraryDirectory enabled="false"/>
+    </libraryDirectory>
+    <publicDirectory>
+      <publicStylesheetsDirectory enabled="false"/>
+      <publicScriptsDirectory enabled="false"/>
+      <publicImagesDirectory enabled="false"/>
+      <publicIndexFile filesystemName="index.php"/>
+      <htaccessFile filesystemName=".htaccess"/>
+    </publicDirectory>
+    <projectProvidersDirectory enabled="false"/>
+    <temporaryDirectory enabled="false"/>
+    <testsDirectory>
+      <testPHPUnitConfigFile filesystemName="phpunit.xml"/>
+      <testPHPUnitBootstrapFile filesystemName="bootstrap.php"/>
+      <testApplicationDirectory>
+        <testApplicationControllerDirectory>
+          <testApplicationControllerFile forControllerName="Index"/>
+        </testApplicationControllerDirectory>
+      </testApplicationDirectory>
+      <testLibraryDirectory/>
+    </testsDirectory>
+  </projectDirectory>
+</projectProfile>

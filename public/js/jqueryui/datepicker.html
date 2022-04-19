@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd"
+>
+<html lang="es">
+<head>
+<title>Seleccionar fecha con jQuery UI</title>
+   <link type="text/css" href="css/cupertino/jquery-ui-1.8.11.custom.css" rel="Stylesheet" />   
+   <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+   <script type="text/javascript" src="js/jquery-ui-1.8.11.custom.min.js"></script>
+   <script type="text/javascript" src="js/jquery.ui.datepicker-es.js"></script>
+
+<script>
+$(document).ready(function(){
+   $("#campofecha").datepicker({
+      showOn: 'both',
+      buttonImage: 'css/cupertino/images/calendar.png',
+      buttonImageOnly: true,
+      changeYear: true,     
+   });
+})
+</script>
+
+
+</head>
+<body>
+
+<form>
+   Fecha: <input type="text" name="fecha" id="campofecha">
+
+</form>
+
+   
+</body>
+</html> 
+

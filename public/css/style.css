@@ -1,0 +1,654 @@
+* 
+{
+ padding: 0;
+ margin: 0;
+}
+
+body 
+{
+ background-color: #E7E8E9;
+ background-image: url('../images/fondopage.jpg');
+ background-repeat: repeat;
+ background-position: left top;
+ font-family: Arial;
+ font-size: 12px;
+ padding: 0;
+ margin: 0;
+ color: #555;
+ line-height: 17px;
+}
+
+img 
+{
+ border-style: none;
+}
+
+a 
+{
+ color: #5C6F4C;
+}
+
+a:hover 
+{
+ text-decoration: none;
+ color: #999;
+}
+
+h1
+{
+ border-bottom-color: #aaa;
+ border-bottom-width: 1px;
+ border-bottom-style: dotted;
+ color:  #555893;
+/* padding-bottom: 4px;
+ margin-top: 0px;
+ margin-right: 0;
+ margin-bottom: 7px;
+ margin-left: 0;*/
+ font-weight: 100;
+ font-size: 22px;
+ letter-spacing: 0px;
+}
+
+h3 
+{
+ border-bottom-color: #aaa;
+ border-bottom-width: 1px;
+ border-bottom-style: dotted;
+ color: #666;
+ padding-bottom: 4px;
+ margin-top: 0px;
+ margin-right: 0;
+ margin-bottom: 7px;
+ margin-left: 0;
+ font-weight: 100;
+ font-size: 22px;
+ letter-spacing: -1px;
+}
+
+h3 a 
+{
+ text-decoration: none;
+ font-size: 22px;
+ letter-spacing: -1px;
+}
+
+h3 a:hover 
+{
+ color: #999;
+}
+
+#wrap 
+{
+ width: 940px;
+ margin-top: 20px;
+ margin-right: auto;
+ margin-bottom: 20px;
+ margin-left: auto;
+}
+
+#header 
+{
+ background-color: #FFFFFF;
+ font-family: "Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+ height: 95px;
+}
+
+#header h1 
+{
+ font-size: 35px;
+ *font-size: 28px;
+ font-weight: 100; 
+ letter-spacing: -3px; 
+ padding-top: 0;
+ padding-right: 0;
+ padding-bottom: 5px; 
+ padding-left: 23px;
+ 
+ text-align: left;
+}
+
+#header h1 a 
+{
+ color: #5C6F4C;
+ text-decoration: none;
+}
+
+#header h1 a:hover 
+{
+ color: #111;
+ text-decoration: none;
+}
+
+#header h2 
+{
+ font-size: 13px;
+ color: #666;
+ padding-top: 4px;
+ padding-right: 0;
+ padding-bottom: 0;
+ padding-left: 23px;
+ text-align: left;
+ font-weight: 100;
+}
+
+#menu 
+{
+ background-image: url(../images/menu.png);
+ background-color: #6D6D6D;
+ background-repeat: no-repeat;
+ height: 32px;
+ line-height: 34px;
+ padding-left: 0px;
+}
+
+#menu li 
+{
+ float: left;
+ list-style-type: none;
+}
+
+#menu li a 
+{
+ display: block;
+ padding-top: 0;
+ padding-right: 10px;
+ padding-bottom: 0;
+ padding-left: 10px;
+ text-decoration: none;
+ color: #fff;
+}
+
+#menu li a:hover 
+{
+ color: #fff;
+ text-decoration: none;
+ background-image: url(../images/menuover.jpg);
+ background-color: #577141;
+ background-repeat: repeat-x;
+}
+
+
+
+#content 
+{
+ background-color: #FFFFFF;
+ padding-top: 10px;
+ padding-right: 10px;
+ padding-bottom: 10px;
+ padding-left: 10px;
+}
+
+#left 
+{
+/* background-color: rgb(12, 33, 141);*/
+background-color: #FFFFFF;
+ padding-top: 10px;
+ padding-right: 10px;
+ padding-bottom: 10px;
+ padding-left: 10px;
+ width: 210px;
+ height: 410px;
+ float: left;
+ font-size: 12px;
+ text-align: justify;
+}
+
+#left h3 
+{
+/* color: rgb(76, 140, 206);*/
+color: #555893;
+ font-size: 18px ;
+ border-bottom-color: rgb(76, 140, 206);
+ border-bottom-width: 1px;
+ border-bottom-style: dotted;
+}
+
+/* ////////////////////*/
+/*     DIV CENTRAL     */
+/* ////////////////////*/
+
+#center
+{
+/* background-color: rgb(203, 202, 255);*/
+ padding-top: 10px;
+ padding-right: 10px;
+ padding-bottom: 20px;
+ padding-left: 35px;
+ width: 850px;
+ float: left;
+}
+
+#edit
+{
+/* background-color: rgb(203, 202, 255);*/
+ padding-top: 10px;
+ padding-right: 180px;
+ padding-bottom: 20px;
+ padding-left: 35px;
+ width: 550px;
+ float: right ;
+}
+
+
+/* ////////////////////////////////////////////////*/
+/*     ESTILO DIV PARA FORMULARIO DE ADMISION      */
+/* ///////////////////////////////////////////////*/
+#forma1
+{
+ background-color: #FFFFFF;
+ 
+}
+
+#forma1 form label
+{
+     font:13px Arial;
+     color: #0B0B61;
+     font-weight: normal;
+     
+}
+
+#forma1 form input
+{
+     font:13px Arial;
+     color: black;
+     font-weight: normal;
+     background-color: #FFFFFF;
+     border: 1px solid #aaaaaa;
+     text-transform:uppercase;
+
+}
+
+#forma1 form select
+{
+     font:13px Arial;
+     color: black;
+     font-weight: normal;
+     background-color: #FFFFFF;
+     border: 1px solid #DDD;
+/*     text-transform:uppercase;*/
+
+}
+/* ////////////////////*/
+/* ////////////////////*/
+
+
+#right 
+{
+/* background-color: rgb(203, 202, 255);*/
+ padding-top: 20px;
+ padding-right: 0;
+ padding-bottom: 20px;
+ padding-left: 30px;
+ width: 630px;
+ float: left;
+ text-align: justify;
+}
+
+#right h3 
+{
+ font-size: 17px;
+ border-style: none;
+ padding-top: 0;
+ padding-right: 0;
+ padding-bottom: 0;
+ padding-left: 10px;
+ margin: 0;
+ color: #111;
+ height: 30px;
+ line-height: 30px;
+}
+
+#right ul 
+{
+ list-style-type: none;
+ padding-top: 10px;
+ padding-right: 0;
+ padding-bottom: 20px;
+ padding-left: 20px;
+}
+
+#right ul li 
+{
+ padding-top: 2px;
+ padding-right: 0;
+ padding-bottom: 3px;
+ padding-left: 0;
+}
+
+#right ul li a 
+{
+ color: #5C6F4C;
+ font-weight: 100;
+ display: block;
+ text-decoration: none;
+ font-size: 14px;
+}
+
+#right ul li a:hover 
+{
+ color: #999;
+}
+
+#footer 
+{
+ background-image: url(../images/Footer.png);
+ background-color: #6D6D6D;
+ background-repeat: repeat;
+ font-size: 10px;
+ color: #16f;
+ text-align: center;
+ height: 38px;
+}
+
+#footer a 
+{
+ color: #aaa;
+ text-decoration: none;
+}
+
+#footer a:hover 
+{
+ color: #aaa;
+ text-decoration: underline;
+}
+
+#logo 
+{
+ background-image: url("../images/logo.jpg");
+ background-repeat: no-repeat;
+ height: 95px;
+ width: 480px;
+}
+
+#cabecera 
+{
+ background-image: url("../images/header.png");
+ background-repeat: no-repeat;
+ height: 40px;
+ left: 0;
+ top: 0;
+ width: 944px;
+ z-index: -2;
+}
+
+/*fieldset*/
+
+legend{
+     font-family: sans-serif;
+     color: darkblue;
+     font-weight: bold;
+     font-size: 13px;
+ }
+
+ /*formularios*/
+ form label{
+     font-family: sans-serif;
+     color: #0B0B61;    
+     font-weight: bold;
+     font-size: 8pt;
+ }
+ /*ingresar solo mayusculas en el form*/
+input.mayusculas{text-transform:uppercase;}
+
+/*botones*/
+a.button2{
+    background:url("../images/botones/boton.png");
+    display:block;
+    color: #0B0B61;
+    font-weight:bold;
+    height:30px;
+    line-height:29px;
+    margin-bottom:14px;
+    text-decoration:none;
+    width:191px;
+}
+a:hover.button2{
+color:#0066CC;
+}
+
+
+/* ----------------------------- */
+/*Diseño de colores de etiquetas */
+/* ------------------------------*/
+
+.labelrotulo{
+     font-family: Arial;
+     color: #5C6F4C;
+     font-weight: bold;
+     font-size: 10pt;
+ }
+ .labeldato{
+     font-family: Arial;
+     color: #5558AA;
+     font-weight: bold;
+     font-size: 9pt;
+ }
+
+ .textdato{
+     font-family: Arial;
+     color: #5558AA;
+     font-weight: bold;
+     font-size: 12pt;
+ }
+
+  .textmed{
+     font-family: Arial;
+     color: #B30;
+     font-weight: bold;
+     font-size: 10pt;
+ }
+
+/* -------------------- */
+/* CLASSES BOTONES */
+/* -------------------- */
+.add{
+    background:url("../images/botones/add.ico") no-repeat 10px 8px;
+    text-indent:30px;
+    display:block;
+}
+
+.cancel{
+    background:url("../images/botones/cancel.ico") no-repeat 10px 8px;
+    text-indent:30px;
+    display:block;
+}
+
+.buscar{
+    background:url("../images/botones/busca.ico") no-repeat 10px 8px;
+    text-indent:30px;
+    display:block;
+}
+
+.editpatient{
+    background:url("../images/botones/editpatient.ico") no-repeat 10px 8px;
+    text-indent:30px;
+    display:block;
+}
+
+.editregister{
+    background:url("../images/botones/editregister.ico") no-repeat 10px 8px;
+    text-indent:30px;
+    display:block;
+}
+.editcontact{
+    background:url("../images/botones/editcontact.ico") no-repeat 10px 8px;
+    text-indent:30px;
+    display:block;
+}
+
+.turno{
+    background:url("../images/botones/turno.ico") no-repeat 10px 8px;
+    text-indent:30px;
+    display:block;
+}
+
+.print{
+    background:url("../images/botones/print.ico") no-repeat 10px 8px;
+    text-indent:30px;
+    display:block;
+}
+/*------------------------*/
+/*   MENSAJES DE ERROR    */
+/*------------------------*/
+
+.info, .success, .warning, .error, .validation {
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+border: 1px solid;
+margin: 10px 0px;
+padding:15px 10px 15px 50px;
+background-repeat: no-repeat;
+background-position: left;
+
+}
+.info {
+color: #00529B;
+background-color: #BDE5F8;
+background-image: url('../images/mensajes/info.png');
+}
+.success {
+color: #4F8A10;
+background-color: #DFF2BF;
+background-image:url('../images/mensajes/success.png');
+}
+.warning{
+color: #9F6000;
+background-color: #FEEFB3;
+background-image: url('../images/mensajes/warning.png');
+}
+.error {
+color: #D8000C;
+background-color: #FFBABA;
+background-image: url('../images/mensajes/error.png');
+}
+
+
+
+/* ////////////////////*/
+/*  DIV AGENDA MEDICA  */
+/* ////////////////////*/
+
+#ag_right
+{
+ /*background-color: rgb(203, 202, 255);*/
+ padding-top: 10px;
+ padding-right: 15px;
+ padding-bottom: 20px;
+ padding-left: 0;
+ width: 540px;
+ float: right;
+}
+
+#ag_left
+{
+ padding-top: 10px;
+ padding-right: 10px;
+ padding-bottom: 10px;
+ padding-left: 10px;
+ width: 340px;
+ height: 330px;
+ float: left;
+ font-size: 12px;
+ text-align: justify;
+}
+
+/* ////////////////////*/
+/*  DIV TURNOS MEDICOS */
+/* ////////////////////*/
+
+#t_right
+{
+ /*background-color: rgb(203, 202, 255);*/
+ padding-top: 10px;
+ padding-right: 15px;
+ padding-bottom: 20px;
+ padding-left: 0;
+ width: 340px;
+ float: right;
+}
+
+#t_left
+{
+ padding-top: 10px;
+ padding-right: 10px;
+ padding-bottom: 10px;
+ padding-left: 10px;
+ width: 540px;
+ height: 330px;
+ float: left;
+ font-size: 12px;
+ text-align: justify;
+}
+/* ////////////////////*/
+/*  selects multiples  */
+/* ////////////////////*/
+
+.listmedic {
+font:13px Arial;
+color: #555893;
+width:280px;
+height: 230px;
+background-color: #FFFFFF;
+border:1px solid #DDD;
+}
+
+.listmed {
+font:13px Arial;
+color: #555893;
+width:280px;
+height:200px;
+background-color: #FFFFFF;
+border:1px solid #DDD;
+}
+
+.listesp {
+font:12px Arial;
+color: #555893;
+background-color: #FFFFFF;
+border:1px solid #DDD;
+text-transform:uppercase;
+}
+
+/*---------------------------------*/
+/*   DIVS PARA DEMANDA RECHAZADA   */
+/*---------------------------------*/
+
+#left_dm
+{
+/* background-color: rgb(12, 33, 141);*/
+background-color: #FFFFFF;
+ padding-top: 10px; 
+ padding-bottom: 10px;
+ padding-left: 10px;
+ width: 210px;
+/* height: 300px;*/
+ float: left;
+ font-size: 12px;
+ text-align: justify;
+}
+
+
+#right_dm
+{
+/* background-color: rgb(203, 202, 255);*/
+ padding-top: 10px;
+ padding-right: 0;
+ padding-bottom: 20px;
+ padding-left: 20px;
+ width: 670px;
+ float: left;
+ text-align: justify;
+}
+
+/* ////////////////////*/
+/*  TITULO DEL AREA    */
+/* ////////////////////*/
+
+.titlearea
+{
+  font:13px Arial;
+  color:dimgrey;
+  border-bottom-style: none;
+  margin-bottom: -15px;
+}

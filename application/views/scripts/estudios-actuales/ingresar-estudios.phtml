@@ -1,0 +1,100 @@
+<script type="text/javascript">
+            jQuery(document).ready( function() {
+                // binds form submission and fields to the validation engine
+                jQuery("#estudios_universitarios").validationEngine();//
+            });
+
+            $(document).ready(function() {
+				$('#tabla').dataTable( {
+					"sScrollY": "80px",
+					"bPaginate": true
+				} );
+			} );
+</script>
+
+<div align="center">
+<!--   <table width="60%" border="1">
+  <tr>
+      <td><input id="habilitar" name="habilitar" type="button" value="Habilitar Formulario" onclick="habilitar_estudios()"/></td>
+      <td><input id="deshabilitar" name="deshabilitar" type="button" value="Dehabilitar Formulario" onclick="deshabilitar_estudios()"/></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>-->
+
+<form id="estudios_universitarios" name="estudios_universitarios" action="" method="post">
+<fieldset><legend>ESTUDIOS UNIVERSITARIOS ACTUALES</legend>
+<table width="60%" border="0">
+  <tr>
+    <td><label>Cedula Identidad</label></td>
+    <td>&nbsp;</td>
+    <td><label>Nombres y Apellidos</label></td>
+  </tr>
+  <tr>
+    <td><label id="cedula_identidad"><?php echo $this->cedula;?></label></td>
+    <td>&nbsp;</td>
+    <td><label id="nombres_empleado"><?php echo $this->nombre; ?></label></td>
+  </tr>
+  <tr>
+    <td><label>Establecimiento / Instituto Superior</label></td>
+    <td>&nbsp;</td>
+    <td><label>Titulo a Obtener</label></td>
+  </tr>
+  <tr>
+    <td><input id="establecimiento" name="establecimiento" type="text" class="validate[required,custom[onlyLetterNumber]] text-input" size="35" /></td>
+    <td>&nbsp;</td>
+    <td><input id="titulo_obtener" name="titulo_obtener" type="text" class="validate[required] text-input" size="35" /></td>
+  </tr>
+  <tr>
+    <td><label>Nivel Actual</label></td>
+    <td>&nbsp;</td>
+    <td><input id="esta_activo" name="esta_activo" type="hidden" value="TRUE"/></td>
+  </tr>
+  <tr>
+    <td><input id="nivel_actual" name="nivel_actual" type="text" class="validate[required] text-input" size="35" /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+    <br>
+</fieldset>
+<br>
+<table width="80%" border="0">
+  <tr>
+    <td width="33%">&nbsp;</td>
+
+    <td width="7%"><input class="button small blue" name="" type="submit" value="Ingresar"/></td>
+    <td width="16%">&nbsp;</td>
+    <td width="6%"><input class="button small blue" name="" type="button" onClick="document.location = '<?php echo $this->url(array('controller' => 'experienciaLaboral' ,'action' => 'ingresar-experiencia'));?>'" value="Siguiente"/></td>
+    <td width="38%">&nbsp;</td>
+  </tr>
+</table>
+</form>
+</div>
+
+<div style="clear:both;"> </div>
+<!--    <fieldset><legend>DISCAPACIDADES PERSONAL</legend>-->
+        <div align="center">
+            <table cellpadding="0" cellspacing="0" border="0" class="display" id="tabla" align="center">
+        <thead>
+		<tr>
+                    <th><label>Id Estudios Actualrs</label></th>
+                        <th>Cedula de Identidad</th>
+                        <th>Nombre Establecimiento</th>
+			<th>Titulo a Obtener</th>
+                        <th>Nivel Actual</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach ($this->estudios as $value): ?>
+		<tr class="gradeA">
+			<td><?php echo $this->escape($value->id_estudio_actual); ?></td>
+                        <td><?php echo $this->cedula; ?></td>
+			<td><?php echo $this->escape($value->establecimiento); ?></td>
+			<td><?php echo $this->escape($value->titulo_obtener); ?></td>
+			<td><?php echo $this->escape($value->nivel_actual); ?></td>
+                </tr>
+        <?php endforeach; ?>
+
+                </table>
+        </div>
+<!--                </fieldset>-->

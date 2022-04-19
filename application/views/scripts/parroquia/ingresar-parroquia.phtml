@@ -1,0 +1,93 @@
+<script type="text/javascript">
+            jQuery(document).ready( function() {
+                // binds form submission and fields to the validation engine
+                jQuery("#Parroquia").validationEngine();
+            });
+
+            $(document).ready(function() {
+				$('#tabla').dataTable( {
+//					"sScrollY": "80px",
+					"bPaginate": true
+				} );
+			} );
+</script>
+
+<div align="center">
+<form id="Parroquia" name="Parroquia" action="" method="post">
+     <fieldset><legend>CANTON</legend>
+  <table width="35%" border="0">
+  <tr>
+    <td width="40%"><label>Provincia</label></td>
+    <td width="13%">&nbsp;</td>
+    <td width="47%"><label>Canton</label></td>
+  </tr>
+  <tr>
+      <td><select id="id_provincia" name="id_provincia" class="validate[required,min[1]]" onchange="cargarCantones(this)">
+      <option value="0">[Seleccionar]</option>
+       <?php foreach ($this->provincia as $item) : ?>
+      <option value="<?php echo $this->escape($item->id_provincia);?>"><?php echo $this->escape($item->nombre_provincia);?></option>
+       <?php endforeach; ?>
+	</select></td>
+    <td>&nbsp;</td>
+    <td><select name="id_canton" id="id_canton" class="validate[required]">
+      <option value="">[Seleccionar]</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td><label>Nombre Parroquia</label></td>
+    <td width="13%">&nbsp;</td>
+    <td><label>Tipo de Parroquia</label></td>
+  </tr>
+  <tr>
+    <td><input id="nombre_parroquia" name="nombre_parroquia" type="text" class="validate[required] text-input" onkeyup="this.value=this.value.toUpperCase()"/></td>
+    <td>&nbsp;</td>
+    <td><select id="tipo_parroquia" name="tipo_parroquia" class="validate[required]">
+      <option value="">[Seleccionar]</option>
+      <option value="URBANA">URBANA</option>
+      <option value="RURAL">RURAL</option>
+    </select></td>
+  </tr>  
+</table>
+         <br>
+          </fieldset>
+    <br>
+<table width="35%" border="0">
+  <tr>
+    <td width="33%">&nbsp;</td>
+
+    <td width="7%"><input class="button small blue" name="" type="submit" value="Ingresar"/></td>
+    <td width="16%">&nbsp;</td>
+    <td width="6%"><input class="button small blue" name="" type="button" onClick="document.location = '<?php echo $this->url(array('controller' => 'index' ,'action' => 'index'));?>'" value="Cancelar"/></td>
+    <td width="38%">&nbsp;</td>
+  </tr>
+</table>
+</form>
+</div>
+
+<div style="clear:both;"> </div>
+    <fieldset><legend>PARROQUIAS DEL PAIS</legend>
+        <div align="center">
+            <table cellpadding="0" cellspacing="0" border="0" class="display" id="tabla" align="center">
+        <thead>
+		<tr>
+			<th>Id Parroquia</th>
+                        <th>Nombre Provincia</th>
+                        <th>Nombre Canton</th>
+			<th>Nombre Parroquia</th>
+                        <th>Tipo de Parroquia</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach ($this->parroquia as $value): ?>
+		<tr class="gradeA">
+			<td><?php echo $this->escape($value->id_parroquia); ?></td>                       
+			<td><?php echo $this->escape($value->nombre_provincia); ?></td>
+			<td><?php echo $this->escape($value->nombre_canton); ?></td>
+			<td><?php echo $this->escape($value->nombre_parroquia); ?></td>
+                        <td><?php echo $this->escape($value->tipo_parroquia); ?></td>
+                </tr>
+        <?php endforeach; ?>
+
+                </table>
+        </div>
+                </fieldset>

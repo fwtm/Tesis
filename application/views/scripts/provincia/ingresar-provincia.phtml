@@ -1,0 +1,81 @@
+<script type="text/javascript">
+            jQuery(document).ready( function() {
+                // binds form submission and fields to the validation engine
+                jQuery("#provincia").validationEngine();//
+            });
+
+             $(document).ready(function() {
+				$('#tabla').dataTable( {
+//					"sScrollY": "80px",
+					"bPaginate": true
+				} );
+			} );
+</script>
+
+<div align="center">
+<form id="provincia" name="provincia" action="" method="post">
+    <fieldset><legend>PROVINCIA</legend>
+
+<table width="200" border="0">
+  <tr>
+    <td><label>Pais</label></td>
+  </tr>
+  <tr>
+      <td><select id="id_pais" name="id_pais" class="validate[required]">
+      <option value="">[Seleccionar]</option>
+       <?php foreach ($this->pais as $item) : ?>
+      <option value="<?php echo $this->escape($item->id_pais);?>"><?php echo $this->escape($item->nombre_pais);?></option>
+       <?php endforeach; ?>
+	</select></td>
+  </tr>
+  <tr>
+    <td><label>Nombre Provincia</label></td>
+  </tr>
+  <tr>
+      <td><input id="nombre_provincia" name="nombre_provincia" type="text" class="validate[required,custom[onlyLetterSp] text-input]" onkeyup="this.value=this.value.toUpperCase()"/></td>
+  </tr>
+</table>
+        <br>
+        </fieldset>
+    <br>
+  <table>
+   <tr>
+       <td style="width: 261px;">
+       </td>
+       <td style="width: 198px;" align="center">
+           <input class="button small blue" type="submit" value="Agregar"/>
+       </td>
+       <td style="width: 198px;" align="center" >
+           <button  type="button"  class="button small blue" onClick="document.location = '<?php echo $this->url(array('controller' => 'Canton' ,'action' => 'ingresar-canton'));?>'" name="Siguiente">Siguiente</button>
+       </td>
+       <td style="width: 222px;">
+       </td>
+   </tr>
+  </table>
+</form>
+</div>
+
+
+<div style="clear:both;"> </div>
+    <fieldset><legend>PROVINCIAS DEL PAIS</legend>
+        <div align="center">
+            <table cellpadding="0" cellspacing="0" border="0" class="display" id="tabla" align="center">
+        <thead>
+		<tr>
+                    <th><label>Id Provincia</label></th>
+                        <th>Pais</th>
+                        <th>Nombre de la Provincia</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach ($this->provincias as $value): ?>
+		<tr class="gradeA">
+			<td><?php echo $this->escape($value->id_provincia); ?></td>
+			<td><?php echo $this->escape($value->nombre_pais); ?></td>
+			<td><?php echo $this->escape($value->nombre_provincia); ?></td>
+                </tr>
+        <?php endforeach; ?>
+
+                </table>
+        </div>
+                </fieldset>

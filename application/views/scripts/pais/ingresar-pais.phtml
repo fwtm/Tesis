@@ -1,0 +1,38 @@
+<script type="text/javascript">
+            jQuery(document).ready( function() {
+                // binds form submission and fields to the validation engine
+                jQuery("#pais").validationEngine();//
+            });
+</script>
+
+<div align="center">
+<form id="pais" name="pais" action="" method="post">
+    <fieldset><legend>PAIS</legend>
+
+<table width="200" border="0">
+  <tr>
+    <td><label>Pais</label></td>
+  </tr>
+  <tr>
+    <td><input id="nombre_pais" name="nombre_pais" type="text" class="validate[required,custom[onlyLetterSp] text-input]" onkeyup="this.value=this.value.toUpperCase()"/></td>
+  </tr>
+</table>
+        <br>
+    </fieldset>
+    <br>
+  <table>
+   <tr>
+       <td style="width: 261px;">
+       </td>
+       <td style="width: 198px;" align="center">
+           <input class="button small blue" type="submit" value="Agregar"/>
+       </td>
+       <td style="width: 198px;" align="center" >
+           <button  type="button"  class="button small blue" onClick="document.location = '<?php echo $this->url(array('controller' => 'index' ,'action' => 'index'));?>'" name="Cancelar">Cancelar</button>
+       </td>
+       <td style="width: 222px;">
+       </td>
+   </tr>
+  </table>
+</form>
+</div>

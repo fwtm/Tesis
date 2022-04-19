@@ -1,0 +1,369 @@
+<link href="<?php echo $this->baseUrl; ?>/js/jqueryui/themes/base/jquery.ui.all.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="<?php echo $this->baseUrl; ?>/js/jqueryui/themes/base/jquery.ui.accordion.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="<?php echo $this->baseUrl; ?>/js/jqueryui/themes/base/demos.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="<?php echo $this->baseUrl; ?>/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<?php echo $this->baseUrl; ?>/js/jqueryui/ui/jquery.ui.core.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl; ?>/js/jqueryui/ui/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl; ?>/js/jqueryui/ui/jquery.ui.accordion.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		$( "#accordion" ).accordion();
+	});
+</script>
+
+<div id="left"> <br />
+  <center>
+      <h3>Menú del Paciente<br /></h3> <br />
+      <a  id="bt_asignar_turno" class="button2" href="<?php echo $this->url(array('controller' => 'DatosPersonales',
+            'action' => 'actualizar-datos')); ?>">Actualizar Datos Personales</a> <br/>
+      <a  id="bt_editar_paciente" class="button2" href="<?php echo $this->url(array('controller' => 'DocenciaUniversitaria',
+            'action' => 'actualizar-docencia')); ?>">Actualizar Docencia Universitaria</a> <br/>
+      <a  id="bt_editar_registro" class="button2" href="<?php echo $this->url(array('controller' => 'EstudiosActuales',
+            'action' => 'actualizar-estudios')); ?>">Actualizar Estudios</a> <br/>
+  </center>
+</div>
+<br />
+<div id="right">
+  <center>
+      <div id="accordion">
+	<h1><a href="#">Datos Personales</a></h1>
+	<div>
+		
+  <table width="100%" border="0">
+    <tr>
+      <td><label>Cedula de Identidad: </label>
+	  <label id="cedula_identidad"><?php echo $this->escape($this->cedula_identidad);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Codigo Personal: </label>
+	  <label id="codigo_personal"><?php echo $this->escape($this->codigo_personal);?></label></td>
+    </tr>
+    <tr>
+      <td><label>Nombre y Apellido: </label>
+	  <label id="nombre_empleado"><?php echo $this->escape($this->nombre_empleado);?></label>
+          <label id="apellido_empleado"><?php echo $this->escape($this->apellido_empleado);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Sexo: </label>
+	  <label id="sexo"><?php echo $this->escape($this->sexo);?></label></td>
+    </tr>
+    <tr>
+      <td><label>Fecha de Nacimiento: </label>
+	  <label id="fecha_nacimiento"><?php echo $this->escape($this->fecha_nacimiento);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Grupo Sanguineo: </label>
+          <label id="grupo_sanguineo"><?php echo $this->escape($this->grupo_sanguineo);?></label></td>
+    </tr>
+    <tr>
+      <td><label>Numero Celular: </label>
+	  <label id="celular"><?php echo $this->escape($this->celular);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Ver Fotografia Empleado: </label>
+	  <label id="foto_empleado"><?php echo $this->escape($this->foto_empleado);?></label></td>
+    </tr>
+    <tr>
+      <td><label>Estado Civil:</label>
+	  <label id="estado_civil"><?php echo $this->escape($this->estado_civil);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Fecha Ingreso Sector Publico: </label>
+	  <label id="ingreso_sector_publico"><?php echo $this->escape($this->ingreso_sector_publico);?></label></td>
+    </tr>
+    <tr>
+      <td><label>Fecha Ingreso al M.S.P: </label>
+	  <label id="ingreso_msp"><?php echo $this->escape($this->ingreso_msp);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Nombramiento Provisional: </label>
+	  <label id="nombramiento_provisional"><?php echo $this->escape($this->nombramiento_provisional);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><label>Nombramiento Definitivo: </label>
+	  <label id="nombramiento_definitivo"><?php echo $this->escape($this->nombramiento_definitivo);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><label>Contrato: </label>
+          <label id="contrato"><?php echo $this->escape($this->contrato);?></label></td>
+    </tr>
+    <tr>
+      <td><label>Programa Financiamiento: </label>
+	      <label id="programa_financiamiento"><?php echo $this->escape($this->programa_financiamiento);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Lugar de Trabajo: </label>
+	  <label id="unidad_operativa"><?php echo $this->escape($this->nombre_provincia);?> - <?php echo $this->escape($this->nombre_canton);?> - <?php echo $this->escape($this->nombre_parroquia);?> - <?php echo $this->escape($this->nombre_unidad);?></label></td>
+    </tr>
+    <tr>
+      <td><label>Tiempo de Servicio: </label>
+	  <label id="tiempo_servicio"><?php echo $this->escape($this->tiempo_servicio);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Estado del Empleado: </label>
+          <label id="esta_activo"><?php echo $this->escape($this->esta_activo);?></label></td>
+    </tr>
+  </table><br>
+	</div>
+
+<!--ACORDION DE DOMICILIO PERSONAL        -->
+<h1><a href="#">Domicilio Personal</a></h1>
+<div>
+<table width="100%" border="0">
+    <tr>
+      <td><label>Avenida Principal: </label>
+	  <label id="avenida_direccion"><?php echo $this->escape($this->avenida_direccion);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Calle: </label>
+	  <label id="calle_direccion"><?php echo $this->escape($this->calle_direccion);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Manzana: </label>
+	  <label id="manzana_domicilio"><?php echo $this->escape($this->manzana_domicilio);?></label>
+      <td>&nbsp;</td>
+      <td><label>Lugar de Referencia: </label>
+	  <label id="lugar_referencia"><?php echo $this->escape($this->lugar_referencia);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Persona de Referencia: </label>
+	  <label id="contacto_referencia"><?php echo $this->escape($this->contacto_referencia);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Telefono: </label>
+          <label id="telefono_contacto"><?php echo $this->escape($this->telefono_contacto);?></label></td>
+    </tr>
+  </table><br>
+</div>
+
+<!--ACORDION FUNCION        -->
+<h1><a href="#">Función del Empleado</a></h1>
+	<div>
+<table width="100%" border="0">
+    <tr>
+      <td><label>Cargo: </label>
+	  <label id="cargo"><?php echo $this->escape($this->cargo);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Puesto Institucional: </label>
+	  <label id="puesto_institucional"><?php echo $this->escape($this->puesto_institucional);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Especialidad: </label>
+	  <label id="tipo_especialidad"><?php echo $this->escape($this->tipo_especialidad);?></label>
+      <td>&nbsp;</td>
+      <td><label>Departamento: </label>
+	  <label id="departamento"><?php echo $this->escape($this->departamento);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Oficina / Consultorio: </label>
+	  <label id="oficina_consultorio"><?php echo $this->escape($this->oficina_consultorio);?></label></td>
+      <td>&nbsp;</td>
+    </tr>
+  </table><br>
+	</div>
+<!--ACORDION DISCAPACIDAD        -->
+<h1><a href="#">Discapacidad</a></h1>
+<div>
+<table width="100%" border="0">
+    <tr>
+      <td><label>Tipo de Discapacidad: </label>
+	  <label id="tipo_discapacidad"><?php echo $this->escape($this->tipo_discapacidad);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Porcentaje de Discapacidad: </label>
+	  <label id="porcentaje_discapacidad"><?php echo $this->escape($this->porcentaje_discapacidad);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Carnet CONADIS: </label>
+	  <label id="carnet_conadis"><?php echo $this->escape($this->carnet_conadis);?></label>
+      <td>&nbsp;</td>
+    </tr>
+  </table><br>	
+</div>
+
+<!--ACORDION TITULO UNIVERSITARIO        -->
+<h1><a href="#">Título Universitario</a></h1>
+<div>
+<table width="100%" border="0">
+    <tr>
+      <td><label>Título Universitario: </label>
+	  <label id="titulo_universitario"><?php echo $this->escape($this->titulo_universitario);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Universidad/Instituto Superior: </label>
+	  <label id="universidad_institucion"><?php echo $this->escape($this->universidad_institucion);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>País: </label>
+	  <label id="pais_universidad"><?php echo $this->escape($this->pais_universidad);?></label>
+      <td>&nbsp;</td>
+      <td><label>Ciudad/Provincia: </label>
+	  <label id="ciudad_universidad"><?php echo $this->escape($this->ciudad_universidad);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Registro CONESUP: </label>
+	  <label id="registro_conesup"><?php echo $this->escape($this->registro_conesup);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Fecha de Graduacion: </label>
+          <label id="fecha_graduacion"><?php echo $this->escape($this->fecha_graduacion);?></label></td>
+    </tr>
+  </table><br>
+</div>
+
+<!--ACORDION TITULO POSTGRADO       -->
+<h1><a href="#">Título de Postgrado</a></h1>
+<div>
+<table width="100%" border="0">
+    <tr>
+      <td><label>Nombre del Postgrado: </label>
+	  <label id="nombre_postgrado"><?php echo $this->escape($this->nombre_postgrado);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Universidad/Instituto Superior: </label>
+	  <label id="institucion_postgrado"><?php echo $this->escape($this->institucion_postgrado);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Titulo Obtenido: </label>
+	  <label id="titulo_obtenido"><?php echo $this->escape($this->titulo_obtenido);?></label>
+      <td>&nbsp;</td>
+      <td><label>Registro CONESUP: </label>
+	  <label id="registro_conesup"><?php echo $this->escape($this->registro_conesup);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Fecha de Graduacion: </label>
+	  <label id="fecha_graduacion"><?php echo $this->escape($this->fecha_graduacion);?></label></td>
+      <td>&nbsp;</td>
+    </tr>
+  </table><br>
+	</div>
+
+<!--ACORDION DOCENCIA UNIVERSITARIA       -->
+<h1><a href="#">Docencia Universitaria</a></h1>
+<div>
+<table width="100%" border="0">
+    <tr>
+      <td><label>Nombre de la Institucion: </label>
+	  <label id="institucion_docencia"><?php echo $this->escape($this->institucion_docencia);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Tipo Contrato: </label>
+	  <label id="tipo_contrato"><?php echo $this->escape($this->tipo_contrato);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Catedra a Dictar: </label>
+	  <label id="catedra"><?php echo $this->escape($this->catedra);?></label>
+      <td>&nbsp;</td>
+      <td><label>Horas a la Semana: </label>
+	  <label id="horas_semana"><?php echo $this->escape($this->horas_semana);?></label></td>
+    </tr>
+  </table><br>
+	</div>
+
+<!--ACORDION ESTUDIOS ACTUALES       -->
+<h1><a href="#">Estudios Actuales</a></h1>
+<div>
+<table width="100%" border="0">
+    <tr>
+      <td><label>Nombre de la Institucion: </label>
+	  <label id="establecimiento"><?php echo $this->escape($this->establecimiento);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Titulo a Obtener: </label>
+	  <label id="titulo_obtener"><?php echo $this->escape($this->titulo_obtener);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Nivel Actual: </label>
+	  <label id="nivel_actual"><?php echo $this->escape($this->nivel_actual);?></label>
+    </tr>
+  </table><br>
+	</div>
+
+<!--ACORDION EXPERIENCIA LABORAL        -->
+<h1><a href="#">Experiencia Laboral</a></h1>
+<div>
+<table width="100%" border="0">
+    <tr>
+      <td><label>Institución/Empresa: </label>
+	  <label id="institucion_empresa"><?php echo $this->escape($this->institucion_empresa);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Puesto Anterior: </label>
+	  <label id="puesto_cargo"><?php echo $this->escape($this->puesto_cargo);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Fecha de Ingreso: </label>
+	  <label id="fecha_entrada"><?php echo $this->escape($this->fecha_entrada);?></label>
+      <td>&nbsp;</td>
+      <td><label>Fecha de Salida: </label>
+	  <label id="fecha_salida"><?php echo $this->escape($this->fecha_salida);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Ciudad: </label>
+	  <label id="id_canton"><?php echo $this->escape($this->id_canton);?></label></td>
+      <td>&nbsp;</td>
+    </tr>
+  </table><br>
+	</div>
+
+<!--ACORDION CAPACITACION        -->
+<h1><a href="#">Capacitación</a></h1>
+<div>
+<table width="100%" border="0">
+    <tr>
+      <td><label>Nombre del Evento: </label>
+	  <label id="nombre_evento"><?php echo $this->escape($this->nombre_evento);?></label></td>
+      <td>&nbsp;</td>
+      <td><label>Institución: </label>
+	  <label id="institucion_capacitacion"><?php echo $this->escape($this->institucion_capacitacion);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Fecha de la Capacitación: </label>
+	  <label id="fecha_capacitacion"><?php echo $this->escape($this->fecha_capacitacion);?></label>
+      <td>&nbsp;</td>
+      <td><label>Número de Horas: </label>
+	  <label id="total_horas"><?php echo $this->escape($this->total_horas);?></label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label>Ciudad: </label>
+	  <label id="lugar"><?php echo $this->escape($this->lugar);?></label></td>
+    </tr>
+  </table><br>
+</div>
+
+</div>
+  </center>
+</div>

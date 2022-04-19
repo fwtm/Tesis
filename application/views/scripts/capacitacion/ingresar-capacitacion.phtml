@@ -1,0 +1,126 @@
+<script type="text/javascript">
+            jQuery(document).ready( function() {
+                // binds form submission and fields to the validation engine
+                jQuery("#capacitacion").validationEngine();//
+            });
+
+            $(document).ready(function(){
+               $("#fecha_capacitacion").datepicker({
+                  yearRange: '1930:2040',
+                  showOn: 'both',
+                  buttonImage: '<?php echo $this->baseUrl; ?>/js/jqueryui/css/cupertino/images/calendar.png',
+                  buttonImageOnly: true,
+                  dateFormat: 'yy/mm/dd',
+                  changeMonth: true,
+                  changeYear: true
+               });
+            })
+
+             $(document).ready(function() {
+				$('#tabla').dataTable( {
+//					"sScrollY": "80px",
+					"bPaginate": true
+				} );
+			} );
+</script>
+
+<div align="center">
+<!--   <table width="60%" border="0">
+  <tr>
+      <td><input id="habilitar" name="habilitar" type="button" value="Habilitar Formulario" onclick="habilitar_capacitacion()"/></td>
+      <td><input id="deshabilitar" name="deshabilitar" type="button" value="Dehabilitar Formulario" onclick="deshabilitar_capacitacion()"/></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>-->
+
+<form id="capacitacion" name="capacitacion" action="" method="post">
+<fieldset><legend>CAPACITACION EMPLEADO</legend>
+<table width="60%" border="0">
+  <tr>
+    <td><label>Cedula Identidad</label></td>
+    <td>&nbsp;</td>
+    <td><label>Nombres y Apellidos</label></td>
+  </tr>
+  <tr>
+    <td><label id="cedula_identidad"><?php echo $this->cedula;?></label></td>
+    <td>&nbsp;</td>
+    <td><label id="nombres_empleado"><?php echo $this->nombre; ?></label></td>
+  </tr>
+  <tr>
+    <td><label>Nombre del Evento</label></td>
+    <td>&nbsp;</td>
+    <td><label>Institución que Impartió la Formación</label></td>
+  </tr>
+  <tr>
+    <td><input id="nombre_evento" name="nombre_evento" type="text" class="validate[required] text-input" size="35" onkeyup="this.value=this.value.toUpperCase()"/></td>
+    <td>&nbsp;</td>
+    <td><input id="institucion_capacitacion" name="institucion_capacitacion" type="text" class="validate[required] text-input" size="35" onkeyup="this.value=this.value.toUpperCase()"/></td>
+  </tr>
+  <tr>
+    <td><label>Fecha de la Capacitación</label></td>
+    <td>&nbsp;</td>
+    <td><label>Número de Horas</label></td>
+  </tr>
+  <tr>
+    <td><input id="fecha_capacitacion" name="fecha_capacitacion" type="text" class="validate[required] text-input" size="35" /></td>
+    <td>&nbsp;</td>
+    <td><input id="total_horas" name="total_horas" type="text" class="validate[required]" size="20" /></td>
+  </tr>
+  <tr>
+    <td><label>Ciudad / Pais</label></td>
+    <td>&nbsp;</td>
+    <td><input id="verificar_capacitacion" name="verificar_capacitacion" type="hidden" value="TRUE"/></td>
+  </tr>
+  <tr>
+    <td><input id="lugar" name="lugar" type="text" class="validate[required]" size="35" onkeyup="this.value=this.value.toUpperCase()"/></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+    <br>
+</fieldset>
+<br>
+<table width="80%" border="0">
+  <tr>
+    <td width="33%">&nbsp;</td>
+
+    <td width="7%"><input class="button small blue" name="" type="submit" value="Ingresar"/></td>
+    <td width="16%">&nbsp;</td>
+    <td width="6%"><input class="button small blue" name="" type="button" onClick="document.location = '<?php echo $this->url(array('controller' => 'DatosPersonales' ,'action' => 'visualizar-datos'));?>'" value="Siguiente"/></td>
+    <td width="38%">&nbsp;</td>
+  </tr>
+</table>
+</form>
+</div>
+
+<div style="clear:both;"> </div>
+<!--    <fieldset><legend>DISCAPACIDADES PERSONAL</legend>-->
+        <div align="center">
+            <table cellpadding="0" cellspacing="0" border="0" class="display" id="tabla" align="center">
+        <thead>
+		<tr>
+			<th>Id Capacitación</th>
+                        <th>Cedula de Identidad</th>
+                        <th>Nombre del Evento</th>
+			<th>Institución que Impartió la Formación</th>
+                        <th>Fecha del Evento</th>
+                        <th>Número de Horas</th>
+                        <th>Pais / Ciudad del Evento</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach ($this->capacitacion as $value): ?>;
+		<tr class="grade">
+			<td><?php echo $this->escape($value->id_capacitacion); ?></td>
+                        <td><?php echo $this->cedula; ?></td>
+			<td><?php echo $this->escape($value->nombre_evento); ?></td>
+			<td><?php echo $this->escape($value->institucion_capacitacion); ?></td>
+			<td><?php echo $this->escape($value->fecha_capacitacion); ?></td>
+                        <td><?php echo $this->escape($value->total_horas); ?></td>
+                        <td><?php echo $this->escape($value->lugar); ?></td>
+                </tr>
+        <?php endforeach; ?>
+
+                </table>
+        </div>
+<!--                </fieldset>-->

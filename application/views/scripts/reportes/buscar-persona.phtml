@@ -1,0 +1,38 @@
+<script type="text/javascript">
+            jQuery(document).ready( function() {
+                // binds form submission and fields to the validation engine
+                jQuery("#reportes").validationEngine();//
+            });
+</script>
+<div id="center">
+<br>
+   <fieldset><legend>Reporte de Asistencias</legend>
+      <form id="reportes" action="" method="post">
+    <table style="text-align: left; width: 800px; height: 74px;" border="0" cellpadding="2" cellspacing="2">
+     <tbody>       
+      <tr>         
+         <td style="vertical-align: top; width: 550px;"><br>
+            <dt id="consulta-label"> <small style="color: rgb(0, 0, 102);"><label for="cedula_identidad" class="validate[required]">
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INGRESE EL NOMBRE O APELLIDO: </label></small><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="consulta" id="consulta" size="45" type="text" class="validate[required]" value="<?php echo $this->pagina; ?>" onkeydown="return consultar(event)" onkeyup="this.value=this.value.toUpperCase()"/>
+
+         
+         <td style="vertical-align: top; width: 180px;"><br>
+             <input type="button" value="Realizar Busqueda" class="button small blue" onclick="cargarReporte(this)">
+         </td>
+      </tbody>
+    </table>
+      </form>
+  </fieldset>
+<br>
+<center>
+    <div id="tabla">
+                 <br /><br />
+                     <p class="labelrotulo"> Ingrese los parametros de busqueda </p>
+                 <br /><br />
+   </div>
+    </center>
+     <br />
+     <br />
+      <br />
+</div>

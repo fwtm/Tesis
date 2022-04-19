@@ -1,0 +1,96 @@
+
+#cabecera_popup
+{
+ background-color: #FFFFFF;
+ font-family: "Arial", sans-serif;
+ float: left;
+ padding-left: 0;
+ display: none;
+}
+
+
+#turno
+{
+ background-color: #FFFFFF;
+ padding-top: 0;
+ padding-right: 0;
+ padding-bottom: 0px;
+ padding-left: 0;
+ visibility: visible;
+}
+#no_print
+{
+ background-color: #FFFFFF;
+ float: none;
+ display: none;
+}
+
+
+/* ////////////////////*/
+/* ////////////////////*/
+
+#footer
+{
+ background-repeat: repeat; 
+ display: none;
+}
+
+
+
+/* ----------------------------- */
+/*Diseño de colores de etiquetas */
+/* ------------------------------*/
+
+
+ .datoturno {
+  color: #666666;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+  .labelturno{
+     font-family: Arial;
+     color: #666666;
+     font-weight: bold;
+     font-size: 15pt;
+ }
+   .labelturnotext{
+     font-family: Arial;
+     color: #666666;
+     font-weight: bold;
+     font-size: 15pt;
+ }
+ .datoturno {
+  color: #666666;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+ .datoturnotext {
+  color: #666666;
+  font-family: Arial;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+ .datoturnohidden {
+  color: #666666;
+  font-family: Arial;
+  font-size: 9px;
+  font-weight: bold;
+  display: inline;
+}
+/*/////////////////////////////*/
+/*ESTILOS PARA TABLA DE TURNOS*/
+/*/////////////////////////////*/
+
+/*.signos{
+ display: inline;
+}
+
+.tablaturno{
+ visibility: hidden;
+ height:10px;
+}*/
